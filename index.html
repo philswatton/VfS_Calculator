@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Votes from Seats Calculator</title>
+    
+        <!-- Mobile Friendly -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+    
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="assets/css/site.css">
+    
+        <!-- Fonts -->
+    
+        <!-- Mathjax -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+        <!-- Calculator Script -->
+        <script src="assets/calc.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Votes from Seats Calculator</h1>
+        </header>
+        <main>
+            <form>
+                <div>
+                    <p>Assembly Size:</p>
+                    <input type="range" min="1" max="1000" value="650" id="S">
+                </div>
+                <div>
+                    <p>Average District Magnitude:</p>
+                    <input type="range" min="1" max="650" value="1" id="M">
+                </div>
+            </form>
+            <section>
+                <div>
+                    <p>Effect Number of Parties, Seats:</p>
+                </div>
+                <div>
+                    <p>Seat Share of Largest Party:</p>
+                </div>
+                <div>
+                    <p>Effect Number of Parties, Votes:</p>
+                </div>
+                <div>
+                    <p>Vote Share of Largest Party:</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
