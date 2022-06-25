@@ -25,28 +25,34 @@
         <main>
             <form>
                 <div>
-                    <div>Assembly Size:<input type="number" min="1" max="1000" value="500" class="number" id="S-input"></div>
+                    <div class="number-div">
+                        <p>Assembly Size:</p>
+                        <input type="number" min="1" max="1000" value="500" class="number" id="S-input">
+                    </div>
                     <input type="range" min="1" max="1000" value="500" id="S-slider">
                 </div>
                 <div>
-                    <div>Average District Magnitude:<input type="number" min="1" max="500" value="10" class="number" id="M-input"></div>
+                    <div class="number-div">
+                        <p>Average District Magnitude:</p>
+                        <input type="number" min="1" max="500" value="10" class="number" id="M-input">
+                    </div>
                     <input type="range" min="1" max="500" value="10" id="M-slider">
                 </div>
             </form>
             <section>
-                <div>
+                <div class="number-div">
                     <p>Effective Number of Seat-Winning Parties:</p>
                     <p class="number" id="enps"></p>
                 </div>
-                <div>
+                <div class="number-div">
                     <p>Seat Share of the Largest Party:</p>
                     <p class="number" id="sslp"></p>
                 </div>
-                <div>
+                <div class="number-div">
                     <p>Effective Number of Vote-Winning Parties:</p>
                     <p class="number" id="enpv"></p>
                 </div>
-                <div>
+                <div class="number-div">
                     <p>Vote Share of the Largest Party:</p>
                     <p class="number" id="vslp"></p>
                 </div>
