@@ -17,19 +17,19 @@ function sslp (M, S) {
 
 //Effective Number of Parties, Votes
 function enpv (M, S) {
-    return(round(((M*S)**(1/4))**(2/3),2));
+    return(round(((M*S)**(1/4)+1)**(2/3),2));
 }
 
 //Vote Share of Largest Party
 function vslp (M, S) {
-    return(round(((M*S)**(1/4))**(-1/2),2));
+    return(round(((M*S)**(1/4)+1)**(-1/2),2));
 }
 
 
 
 /* Page Functionality */
 
-//Update function
+//Function to call caclulations
 function calculate(M,S) {
     document.getElementById("enps").innerText = enps(M,S);
     document.getElementById("sslp").innerText = sslp(M,S);
@@ -37,42 +37,74 @@ function calculate(M,S) {
     document.getElementById("vslp").innerText = vslp(M,S);
 }
 
+
 //Event listeners
 window.onload = function(){
     // M and S input sliders
-    S = document.getElementById("S");
-    M = document.getElementById("M");
+    Sslider = document.getElementById("S-slider");
+    Mslider = document.getElementById("M-slider");
 
     // M and S values
-    Sval = document.getElementById("S-value");
-    Mval = document.getElementById("M-value");
+    Sinput = document.getElementById("S-input");
+    Minput = document.getElementById("M-input");
 
     // Set initial values
     update = function() {
-        calculate(M.value, S.value);
+        calculate(Mslider.value, Sslider.value);
     }
     update();
 
     // S slider
-    S.addEventListener("input", function() {
-        // Set max of M=S
-        document.getElementById("M").max = S.value;
+    Sslider.addEventListener("input", function() {
 
-        // Update value reporter
-        Sval.innerText = S.value;
-        Mval.innerText = M.value;
+        // Set max of M=S
+        Mslider.max = Sslider.value;
+        Minput.max = Sslider.value;
+
+        // Update value reporters
+        Sinput.value = Sslider.value;
+        Minput.value = Mslider.value;
 
         // Update page values
         update();
+
     });
 
-    // M slider
-    M.addEventListener("input", function() {
+    // S input
+    Sinput.addEventListener("input", function() {
 
-        // Update value reporter
-        Mval.innerText = M.value;
+        // Set max of M=S
+        Mslider.max = Sinput.value;
+        Minput.max = Sinput.value;
+
+        // Update value reporters
+        Sslider.value = Sinput.value;
+        Minput.value = Mslider.value;
 
         // Update page values
         update();
+
+    });
+
+    //M slider
+    Mslider.addEventListener("input", function() {
+
+        // Update value reporters
+        Minput.value = Mslider.value;
+
+        // Update page values
+        update();
+
+    });
+
+    //M input
+    Minput.addEventListener("input", function() {
+
+        // Update value reporters
+        Mslider.value = Minput.value;
+
+        // Update page values
+        update();
+
     });
 }
