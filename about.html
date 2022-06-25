@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Votes from Seats Calculator</title>
+    
+        <!-- Mobile Friendly -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+    
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="assets/site.css">
+    
+        <!-- Fonts -->
+    
+        <!-- Mathjax -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>About</h1>
+            <a href="index.html">Votes from Seats Calculator</a>
+            <a href="https://philswatton.github.io/projects">Back to projects</a>
+        </header>
+        <main>
+            <p>This application is an implentation of the four laws developed in the book <a href="https://www.cambridge.org/core/books/votes-from-seats/890D24F8D0DB2FF9CCEA1C77CE4E463F">Votes from Seats: Logical Models of Electoral Systems</a> by <a href="http://www.mshugart.net/">Matthew Shugart</a> and Rein Taagepera. The starting points are \(S\), the number of seats in the assembly, and \(M\), the average district size for seats in that assembly. From these two values, laws for the following quantities are developed:</p>
+            <ul>
+                <li>\(N_s\): Effective Number of Seat-Winning Parties</li>
+                <li>\(s_1\): Seat Share of the Largest Party</li>
+                <li>\(N_v\): Effective Number of Vote-Winning Parties</li>
+                <li>\(v_1\): Vote Share of the Largest Party</li>
+            </ul>
+            <p>The four laws are:</p>
+            <ul>
+                <li>\(N_s = (MS)^{1/6}\)</li>
+                <li>\(s_1 = (MS)^{-1/8}\)</li>
+                <li>\(N_v = ((MS)^{1/4}+1)^{2/3}\)</li>
+                <li>\(v_1 = ((MS)^{1/4}+1)^{-1/2}\)</li>
+            </ul>
+        </main>
+    </body>
+</html>
