@@ -13,44 +13,42 @@
     
         <!-- Fonts -->
     
-        <!-- Mathjax -->
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
         <!-- Calculator Script -->
         <script src="assets/calc.js"></script>
     </head>
     <body>
         <header>
             <h1>Votes from Seats Calculator</h1>
+            <a href="about.html">About</a>
+            <a href="https://philswatton.github.io/projects">Back to projects</a>
         </header>
         <main>
             <form>
                 <div>
-                    <div>Assembly Size:<input type="number" min="1" max="1000" value="650" id="S-input"></div>
-                    <input type="range" min="1" max="1000" value="650" id="S-slider">
+                    <div>Assembly Size:<input type="number" min="1" max="1000" value="500" class="number" id="S-input"></div>
+                    <input type="range" min="1" max="1000" value="500" id="S-slider">
                 </div>
                 <div>
-                    <div>Average District Magnitude:<input type="number" min="1" max="1000" value="1" id="M-input"></div>
-                    <input type="range" min="1" max="650" value="1" id="M-slider">
+                    <div>Average District Magnitude:<input type="number" min="1" max="500" value="10" class="number" id="M-input"></div>
+                    <input type="range" min="1" max="500" value="10" id="M-slider">
                 </div>
             </form>
             <section>
                 <div>
-                    <p>Effective Number of Parties, Seats:</p>
-                    <p id="enps"></p>
+                    <p>Effective Number of Seat-Winning Parties:</p>
+                    <p class="number" id="enps"></p>
                 </div>
                 <div>
-                    <p>Seat Share of Largest Party:</p>
-                    <p id="sslp"></p>
+                    <p>Seat Share of the Largest Party:</p>
+                    <p class="number" id="sslp"></p>
                 </div>
                 <div>
-                    <p>Effective Number of Parties, Votes:</p>
-                    <p id="enpv"></p>
+                    <p>Effective Number of Vote-Winning Parties:</p>
+                    <p class="number" id="enpv"></p>
                 </div>
                 <div>
-                    <p>Vote Share of Largest Party:</p>
-                    <p id="vslp"></p>
+                    <p>Vote Share of the Largest Party:</p>
+                    <p class="number" id="vslp"></p>
                 </div>
             </section>
         </main>
