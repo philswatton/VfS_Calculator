@@ -1,0 +1,51 @@
+/* Layout */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about {
+    flex-direction: column;
+}
+
+.number-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* Appearance */
+form {
+    border: 1px solid black;
+    margin: 0px 10px 0px 0px;
+}
+
+section {
+    border: 1px solid black;
+    margin: 0px 0px 0px 10px;
+}
+
+p {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.number {
+    width: 80px;
+    margin: 0px 0px 0px 5px;
+    border: 1px solid black;
+}
+
+
+/* Control Menu */
